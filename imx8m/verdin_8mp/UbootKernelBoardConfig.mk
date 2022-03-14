@@ -3,14 +3,8 @@ TARGET_BOOTLOADER_POSTFIX := bin
 UBOOT_POST_PROCESS := true
 
 # u-boot target
-TARGET_BOOTLOADER_CONFIG := imx8mp:imx8mp_evk_android_defconfig
-TARGET_BOOTLOADER_CONFIG += imx8mp-trusty:imx8mp_evk_android_trusty_defconfig
-TARGET_BOOTLOADER_CONFIG += imx8mp-trusty-secure-unlock:imx8mp_evk_android_trusty_secure_unlock_defconfig
-TARGET_BOOTLOADER_CONFIG += imx8mp-dual:imx8mp_evk_android_dual_defconfig
-TARGET_BOOTLOADER_CONFIG += imx8mp-trusty-dual:imx8mp_evk_android_trusty_dual_defconfig
-TARGET_BOOTLOADER_CONFIG += imx8mp-evk-uuu:imx8mp_evk_android_uuu_defconfig
-TARGET_BOOTLOADER_CONFIG += imx8mp-powersave:imx8mp_evk_android_powersave_defconfig
-TARGET_BOOTLOADER_CONFIG += imx8mp-trusty-powersave:imx8mp_evk_android_trusty_powersave_defconfig
+TARGET_BOOTLOADER_CONFIG += imx8mp-dual:verdin-imx8mp_android_dual_defconfig
+TARGET_BOOTLOADER_CONFIG += imx8mp-verdin-uuu:verdin-imx8mp_android_uuu_defconfig
 
 ifneq ($(IMX8MP_USES_GKI),)
 TARGET_KERNEL_DEFCONFIG := gki_defconfig
