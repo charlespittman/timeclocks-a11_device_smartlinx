@@ -138,32 +138,7 @@ endif
 
 BOARD_PREBUILT_DTBOIMAGE := out/target/product/verdin_8mp/dtbo-imx8mp.img
 
-ifeq ($(TARGET_USE_DYNAMIC_PARTITIONS),true)
-  ifeq ($(IMX_NO_PRODUCT_PARTITION),true)
-    TARGET_BOARD_DTS_CONFIG := imx8mp:imx8mp-evk-no-product.dtb
-  else
-    # Default use basler + ov5640
-    TARGET_BOARD_DTS_CONFIG := imx8mp:imx8mp-evk-basler-ov5640.dtb
-    # Only ov5640
-    TARGET_BOARD_DTS_CONFIG += imx8mp-ov5640:imx8mp-evk.dtb
-    # Only basler
-    TARGET_BOARD_DTS_CONFIG += imx8mp-basler:imx8mp-evk-basler.dtb
-    # Used to support mcu image
-    TARGET_BOARD_DTS_CONFIG += imx8mp-rpmsg:imx8mp-evk-wm8960-hifiberry-dacpp-m-rpmsg.dtb
-    # Support LVDS interface
-    TARGET_BOARD_DTS_CONFIG += imx8mp-lvds:imx8mp-evk-it6263-lvds-dual-channel.dtb
-    # Support LVDS panel
-    TARGET_BOARD_DTS_CONFIG += imx8mp-lvds-panel:imx8mp-evk-jdi-wuxga-lvds-panel.dtb
-    # Support MIPI panel
-    TARGET_BOARD_DTS_CONFIG += imx8mp-mipi-panel:imx8mp-evk-rm67191.dtb
-  endif
-else # no dynamic parition feature
-  ifeq ($(IMX_NO_PRODUCT_PARTITION),true)
-    TARGET_BOARD_DTS_CONFIG := imx8mp:imx8mp-evk-no-product-no-dynamic_partition.dtb
-  else
-    TARGET_BOARD_DTS_CONFIG := imx8mp:imx8mp-evk-no-dynamic_partition.dtb
-  endif
-endif
+TARGET_BOARD_DTS_CONFIG += imx8mp:imx8mp-verdin-wifi-dahlia.dtb
 
 BOARD_SEPOLICY_DIRS := \
        device/nxp/imx8m/sepolicy \
