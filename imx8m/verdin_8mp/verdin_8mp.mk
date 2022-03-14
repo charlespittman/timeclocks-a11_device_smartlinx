@@ -306,7 +306,7 @@ PRODUCT_PACKAGES += \
 
 # nxp 8997 wifi and bluetooth combo Firmware
 PRODUCT_COPY_FILES += \
-    vendor/nxp/imx-firmware/nxp/FwImage_8997/pcieuart8997_combo_v4.bin:vendor/firmware/pcieuart8997_combo_v4.bin \
+    device/toradex/imx8m/verdin_8mp/wifi_firmware/sdsd8997_combo_v4.bin:vendor/firmware/mrvl/sdsd8997_combo_v4.bin \
     vendor/nxp/imx-firmware/nxp/android_wifi_mod_para.conf:vendor/firmware/wifi_mod_para.conf \
     vendor/nxp/imx-firmware/nxp/android_wifi_mod_para_powersave.conf:vendor/firmware/wifi_mod_para_powersave.conf
 
