@@ -27,3 +27,10 @@
 /sys/class/gpio/* value        0666 system system
 /sys/class/gpio/* edge         0666 system system
 /sys/class/gpio/* active_low   0666 system system
+
+# PWM
+/sys/class/pwm/* export             0222 system system
+/sys/class/pwm/* pwm0/duty_cycle    0666 system system
+/sys/class/pwm/* pwm0/enable        0666 system system
+/sys/class/pwm/* pwm0/period        0666 system system
+/sys/class/pwm/* pwm0/polarity      0666 system system
