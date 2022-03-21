@@ -16,6 +16,11 @@ BOARD_VENDOR_KERNEL_MODULES += \
     $(KERNEL_OUT)/drivers/net/wireless/marvell/mwifiex/mwifiex.ko \
     $(KERNEL_OUT)/drivers/net/wireless/marvell/mwifiex/mwifiex_sdio.ko
 
+#SPI kernel modules
+BOARD_VENDOR_KERNEL_MODULES += \
+    $(KERNEL_OUT)/drivers/spi/spi-bitbang.ko \
+    $(KERNEL_OUT)/drivers/spi/spi-imx.ko
+
 # CONFIG_IMX_SDMA: imx-sdma.ko, sdma used for audio
 # CONFIG_SND_SOC_IMX_PCM_DMA: imx-pcm-dma-common.ko, used for fsl_micfil
 # CONFIG_SND_SOC_IMX_MICFIL: snd-soc-fsl-micfil.ko snd-soc-imx-micfil.ko, used for fsl_micfil
