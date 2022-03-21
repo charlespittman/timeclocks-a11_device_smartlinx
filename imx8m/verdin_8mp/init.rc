@@ -122,6 +122,10 @@ on early-boot && property:vendor.skip.charger_not_need=0
     # Set tracefs permission to 755
     chmod 0755 /sys/kernel/debug/tracing
 
+    # GPIO export/unexport permissions
+    chmod 0222 /sys/class/gpio/export
+    chmod 0222 /sys/class/gpio/unexport
+
     # Set sw_sync group to graphics and set permission to 664
     chown root graphics /sys/kernel/debug/sync/sw_sync
     chmod 0664 /sys/kernel/debug/sync/sw_sync
