@@ -23,7 +23,6 @@ PRODUCT_MANUFACTURER := nxp
 # Android infrastructures
 PRODUCT_PACKAGES += \
     CactusPlayer \
-    SystemUpdaterSample \
     charger_res_images \
     charger \
     ethernet \
