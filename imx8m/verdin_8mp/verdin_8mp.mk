@@ -487,3 +487,15 @@ PRODUCT_PACKAGES += \
     trusty_keymaster_set_attestation_key_recovery \
     storageproxyd_recovery
 endif
+
+PRODUCT_PACKAGES += \
+    UpdateFactoryUI \
+    UpdateFactoryService \
+    CAN_handler \
+    GPIO_handler \
+    PWM_handler \
+    Serial_handler \
+    SPI_handler
+
+PRODUCT_COPY_FILES += \
+    device/toradex/imx8m/com.kynetics.uf.service.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.kynetics.uf.service.xml
