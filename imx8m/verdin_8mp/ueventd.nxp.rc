@@ -21,3 +21,9 @@
 
 /sys/devices/virtual/thermal/thermal_zone* trip_point_0_hyst 0660 system system
 /sys/devices/virtual/thermal/thermal_zone* trip_point_1_hyst 0660 system system
+
+# GPIO
+/sys/class/gpio/* direction    0666 system system
+/sys/class/gpio/* value        0666 system system
+/sys/class/gpio/* edge         0666 system system
+/sys/class/gpio/* active_low   0666 system system
