@@ -461,6 +461,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rebootescrow.device=/dev/block/pmem0
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.allow_downgrade=true
+
 PRODUCT_SOONG_NAMESPACES += hardware/google/camera
 PRODUCT_SOONG_NAMESPACES += vendor/nxp-opensource/imx/camera
 
