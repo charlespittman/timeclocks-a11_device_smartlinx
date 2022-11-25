@@ -281,6 +281,10 @@ service early_init_sh /vendor/bin/init.insmod.sh /vendor/etc/early.init.cfg vend
     disabled
     oneshot
 
+# Load the correct Bluetooth HAL
+on property:sys.boot_completed=1
+    start init-bluetooth-sh
+
 on property:sys.boot_completed=1 && property:vendor.storageproxyd=trusty && property:vendor.skip.charger_not_need=0
     start storageproxyd
 
@@ -309,3 +313,10 @@ on property:ro.boot.lpa.enable=1
     setprop vendor.audio.lpa.period_ms 500
     setprop vendor.audio.lpa.enable 1
     write /sys/lpa_ctrl/lpa 1
+
+service init-bluetooth-sh /vendor/bin/init.bluetooth.sh
+    class late_start
+    user root
+    group root radio
+    oneshot
+    disabled

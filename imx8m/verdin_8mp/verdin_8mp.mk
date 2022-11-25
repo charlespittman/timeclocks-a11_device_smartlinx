@@ -291,6 +291,9 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth@1.0-service.btlinux
 
+PRODUCT_COPY_FILES += \
+    device/toradex/imx8m/verdin_8mp/init.bluetooth.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.bluetooth.sh
+
 #nxp 8997 Bluetooth vendor config
 PRODUCT_COPY_FILES += \
     device/toradex/imx8m/verdin_8mp/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf
