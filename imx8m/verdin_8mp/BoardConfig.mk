@@ -141,7 +141,7 @@ BOARD_PREBUILT_DTBOIMAGE := out/target/product/verdin_8mp/dtbo-imx8mp.img
 TARGET_BOARD_DTS_CONFIG += imx8mp:imx8mp-verdin-wifi-dahlia.dtb
 
 BOARD_SEPOLICY_DIRS := \
-       device/nxp/imx8m/sepolicy \
+       device/toradex/imx8m/sepolicy \
        $(IMX_DEVICE_PATH)/sepolicy
 
 TARGET_BOARD_KERNEL_HEADERS := device/nxp/common/kernel-headers
