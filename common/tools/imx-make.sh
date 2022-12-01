@@ -126,7 +126,7 @@ if [ -n "${build_kernel}" ] && [ ${TARGET_PRODUCT} = "evk_8mp" ]; then
     build_kernel_module_flag=1;
 fi
 
-product_makefile=`pwd`/`find device/toradex -maxdepth 4 -name "${TARGET_PRODUCT}.mk"`;
+product_makefile=`pwd`/`find device/smartlinx -maxdepth 4 -name "${TARGET_PRODUCT}.mk"`;
 product_path=${product_makefile%/*}
 soc_path=${product_path%/*}
 nxp_git_path=${soc_path%/*}
