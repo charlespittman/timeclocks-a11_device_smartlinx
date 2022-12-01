@@ -27,8 +27,8 @@
 # Copied from build/target/product/AndroidProducts.mk
 
 PRODUCT_MAKEFILES := \
-  $(LOCAL_DIR)/verdin_8mp/verdin_8mp.mk
+  $(LOCAL_DIR)/slate_8mp/slate_8mp.mk
 
 COMMON_LUNCH_CHOICES := \
-  verdin_8mp-user \
-  verdin_8mp-userdebug
+  slate_8mp-user \
+  slate_8mp-userdebug

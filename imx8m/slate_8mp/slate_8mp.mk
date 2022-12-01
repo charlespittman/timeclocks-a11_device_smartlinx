@@ -1,22 +1,22 @@
 # This is a FSL Android Reference Design platform based on i.MX8QP ARD board
 # It will inherit from FSL core product which in turn inherit from Google generic
 
-IMX_DEVICE_PATH := device/toradex/imx8m/verdin_8mp
+IMX_DEVICE_PATH := device/smartlinx/imx8m/slate_8mp
 
 # configs shared between uboot, kernel and Android rootfs
 include $(IMX_DEVICE_PATH)/SharedBoardConfig.mk
 
 -include device/toradex/common/imx_path/ImxPathConfig.mk
-include device/toradex/imx8m/ProductConfigCommon.mk
+include device/smartlinx/imx8m/ProductConfigCommon.mk
 
 ifneq ($(wildcard $(IMX_DEVICE_PATH)/fstab.nxp),)
 $(shell touch $(IMX_DEVICE_PATH)/fstab.nxp)
 endif
 
 # Overrides
-PRODUCT_NAME := verdin_8mp
-PRODUCT_DEVICE := verdin_8mp
-PRODUCT_MODEL := VERDIN_8MP
+PRODUCT_NAME := slate_8mp
+PRODUCT_DEVICE := slate_8mp
+PRODUCT_MODEL := SLATE_8MP
 
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_SOONG_NAMESPACES += vendor/nxp-opensource/imx/power
@@ -137,10 +137,10 @@ PRODUCT_COPY_FILES += \
 endif
 
 PRODUCT_COPY_FILES += \
-    device/toradex/imx8m/verdin_8mp/camera_config_imx8mp.json:$(TARGET_COPY_OUT_VENDOR)/etc/configs/camera_config_imx8mp.json \
-    device/toradex/imx8m/verdin_8mp/ov5640_camera_config_imx8mp.json:$(TARGET_COPY_OUT_VENDOR)/etc/configs/ov5640_camera_config_imx8mp.json \
-    device/toradex/imx8m/verdin_8mp/isp_camera_config_imx8mp.json:$(TARGET_COPY_OUT_VENDOR)/etc/configs/isp_camera_config_imx8mp.json \
-    device/toradex/imx8m/verdin_8mp/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
+    device/smartlinx/imx8m/slate_8mp/camera_config_imx8mp.json:$(TARGET_COPY_OUT_VENDOR)/etc/configs/camera_config_imx8mp.json \
+    device/smartlinx/imx8m/slate_8mp/ov5640_camera_config_imx8mp.json:$(TARGET_COPY_OUT_VENDOR)/etc/configs/ov5640_camera_config_imx8mp.json \
+    device/smartlinx/imx8m/slate_8mp/isp_camera_config_imx8mp.json:$(TARGET_COPY_OUT_VENDOR)/etc/configs/isp_camera_config_imx8mp.json \
+    device/smartlinx/imx8m/slate_8mp/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
 
 # ONLY devices that meet the CDD's requirements may declare these features
 PRODUCT_COPY_FILES += \
@@ -180,7 +180,7 @@ PRODUCT_COPY_FILES += \
     device/nxp/common/seccomp_policy/codec2.vendor.ext.policy:vendor/etc/seccomp_policy/codec2.vendor.ext.policy
 
 PRODUCT_COPY_FILES += \
-    device/toradex/imx8m/verdin_8mp/powerhint_imx8mp.json:$(TARGET_COPY_OUT_VENDOR)/etc/configs/powerhint_imx8mp.json
+    device/smartlinx/imx8m/slate_8mp/powerhint_imx8mp.json:$(TARGET_COPY_OUT_VENDOR)/etc/configs/powerhint_imx8mp.json
 
 # fastboot_imx_flashall scripts, fsl-sdcard-partition script uuu_imx_android_flash scripts
 PRODUCT_COPY_FILES += \
@@ -273,7 +273,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.imx
 PRODUCT_COPY_FILES += \
-    device/toradex/imx8m/verdin_8mp/thermal_info_config_imx8mp.json:$(TARGET_COPY_OUT_VENDOR)/etc/configs/thermal_info_config_imx8mp.json
+    device/smartlinx/imx8m/slate_8mp/thermal_info_config_imx8mp.json:$(TARGET_COPY_OUT_VENDOR)/etc/configs/thermal_info_config_imx8mp.json
 
 # Neural Network HAL and lib
 PRODUCT_PACKAGES += \
@@ -292,11 +292,11 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service.btlinux
 
 PRODUCT_COPY_FILES += \
-    device/toradex/imx8m/verdin_8mp/init.bluetooth.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.bluetooth.sh
+    device/smartlinx/imx8m/slate_8mp/init.bluetooth.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.bluetooth.sh
 
 #nxp 8997 Bluetooth vendor config
 PRODUCT_COPY_FILES += \
-    device/toradex/imx8m/verdin_8mp/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf
+    device/smartlinx/imx8m/slate_8mp/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf
 
 # WiFi HAL
 PRODUCT_PACKAGES += \
@@ -310,8 +310,8 @@ PRODUCT_PACKAGES += \
 
 # nxp 8997 wifi and bluetooth combo Firmware
 PRODUCT_COPY_FILES += \
-    device/toradex/imx8m/verdin_8mp/wifi_firmware/sdsd8997_combo_v4.bin:vendor/firmware/mrvl/sdsd8997_combo_v4.bin \
-    device/toradex/imx8m/verdin_8mp/wifi_firmware/sdiouart8997_combo_v4.bin:vendor/firmware/mrvl/sdiouart8997_combo_v4.bin \
+    device/smartlinx/imx8m/slate_8mp/wifi_firmware/sdsd8997_combo_v4.bin:vendor/firmware/mrvl/sdsd8997_combo_v4.bin \
+    device/smartlinx/imx8m/slate_8mp/wifi_firmware/sdiouart8997_combo_v4.bin:vendor/firmware/mrvl/sdiouart8997_combo_v4.bin \
     vendor/nxp/imx-firmware/nxp/android_wifi_mod_para.conf:vendor/firmware/wifi_mod_para.conf \
     vendor/nxp/imx-firmware/nxp/android_wifi_mod_para_powersave.conf:vendor/firmware/wifi_mod_para_powersave.conf
 
@@ -485,7 +485,7 @@ ifneq ($(filter TRUE true 1,$(IMX_OTA_POSTINSTALL)),)
     POSTINSTALL_OPTIONAL_vendor=false
 
   PRODUCT_COPY_FILES += \
-    out/target/product/verdin_8mp/obj/UBOOT_COLLECTION/u-boot-imx8mp.imx:$(TARGET_COPY_OUT_VENDOR)/etc/bootloader0.img
+    out/target/product/slate_8mp/obj/UBOOT_COLLECTION/u-boot-imx8mp.imx:$(TARGET_COPY_OUT_VENDOR)/etc/bootloader0.img
 endif
 
 
@@ -506,4 +506,4 @@ PRODUCT_PACKAGES += \
     SPI_handler
 
 PRODUCT_COPY_FILES += \
-    device/toradex/imx8m/com.kynetics.uf.service.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.kynetics.uf.service.xml
+    device/smartlinx/imx8m/com.kynetics.uf.service.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.kynetics.uf.service.xml

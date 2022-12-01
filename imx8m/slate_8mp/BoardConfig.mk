@@ -31,9 +31,9 @@ SOONG_CONFIG_IMXPLUGIN_BOARD_VPU_ONLY = false
 # Product-specific compile-time definitions.
 #
 
-IMX_DEVICE_PATH := device/toradex/imx8m/verdin_8mp
+IMX_DEVICE_PATH := device/smartlinx/imx8m/slate_8mp
 
-include device/toradex/imx8m/BoardConfigCommon.mk
+include device/smartlinx/imx8m/BoardConfigCommon.mk
 
 BUILD_TARGET_FS ?= ext4
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -136,12 +136,12 @@ $(error "TARGET_USERIMAGES_USE_UBIFS and TARGET_USERIMAGES_USE_EXT4 config open 
 endif
 endif
 
-BOARD_PREBUILT_DTBOIMAGE := out/target/product/verdin_8mp/dtbo-imx8mp.img
+BOARD_PREBUILT_DTBOIMAGE := out/target/product/slate_8mp/dtbo-imx8mp.img
 
 TARGET_BOARD_DTS_CONFIG += imx8mp:imx8mp-verdin-wifi-dahlia.dtb
 
 BOARD_SEPOLICY_DIRS := \
-       device/toradex/imx8m/sepolicy \
+       device/smartlinx/imx8m/sepolicy \
        $(IMX_DEVICE_PATH)/sepolicy
 
 TARGET_BOARD_KERNEL_HEADERS := device/nxp/common/kernel-headers
