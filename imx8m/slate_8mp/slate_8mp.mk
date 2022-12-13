@@ -505,6 +505,13 @@ PRODUCT_PACKAGES += \
     Serial_handler \
     SPI_handler
 
+# i2c-tools
+PRODUCT_PACKAGES += \
+    i2cdetect \
+    i2cdump \
+    i2cget \
+    i2cset
+
 PRODUCT_COPY_FILES += \
     device/smartlinx/imx8m/com.kynetics.uf.service.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.kynetics.uf.service.xml
 
