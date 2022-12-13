@@ -107,7 +107,10 @@ BOARD_KERNEL_CMDLINE += swiotlb=65536
 # display config
 BOARD_KERNEL_CMDLINE += androidboot.lcd_density=160 androidboot.primary_display=imx-drm
 
-# wifi config
+# remove blinking cursor at boot
+BOARD_KERNEL_CMDLINE += vt.global_cursor_default=0
+
+## wifi config
 ifeq ($(POWERSAVE),true)
     BOARD_KERNEL_CMDLINE += androidboot.wificountrycode=CN moal.mod_para=wifi_mod_para_powersave.conf
 else
