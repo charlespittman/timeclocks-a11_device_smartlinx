@@ -507,3 +507,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     device/smartlinx/imx8m/com.kynetics.uf.service.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.kynetics.uf.service.xml
+
+PRODUCT_COPY_FILES += \
+    device/smartlinx/imx8m/slate_8mp/bootanimation/bootanimation-slx1280.zip:system/media/bootanimation.zip
