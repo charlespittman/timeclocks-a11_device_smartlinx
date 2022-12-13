@@ -138,7 +138,7 @@ endif
 
 BOARD_PREBUILT_DTBOIMAGE := out/target/product/slate_8mp/dtbo-imx8mp.img
 
-TARGET_BOARD_DTS_CONFIG += imx8mp:imx8mp-verdin-wifi-dahlia.dtb
+TARGET_BOARD_DTS_CONFIG += imx8mp:imx8mp-verdin-slate.dtb
 
 BOARD_SEPOLICY_DIRS := \
        device/smartlinx/imx8m/sepolicy \
