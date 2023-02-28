@@ -41,6 +41,10 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_RECOVERY_FSTAB = $(IMX_DEVICE_PATH)/fstab.nxp
 
 BOARD_BPT_INPUT_FILES += device/nxp/common/partition/device-partitions-13GB-ab-dual-bootloader_super.bpt
+ADDITION_BPT_PARTITION = partition-table-28GB:device/nxp/common/partition/device-partitions-28GB-ab_super.bpt \
+                        partition-table-dual:device/nxp/common/partition/device-partitions-13GB-ab-dual-bootloader_super.bpt \
+                        partition-table-28GB-dual:device/nxp/common/partition/device-partitions-28GB-ab-dual-bootloader_super.bpt
+
 
 # Vendor Interface manifest and compatibility
 ifeq ($(POWERSAVE),true)
